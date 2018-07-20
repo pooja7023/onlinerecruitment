@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="changesModelStoreContainer" CdmEntityContainer="changesEntities2">
+    <EntitySetMapping Name="AdminTables">
+      <EntityTypeMapping TypeName="changesModel.AdminTable">
+        <MappingFragment StoreEntitySet="AdminTable">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="mobilephone" ColumnName="mobilephone" />
+          <ScalarProperty Name="password1" ColumnName="password1" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="changesModel.Employee">
+        <MappingFragment StoreEntitySet="Employees">
+          <ScalarProperty Name="sno" ColumnName="sno" />
+          <ScalarProperty Name="location" ColumnName="location" />
+          <ScalarProperty Name="technology" ColumnName="technology" />
+          <ScalarProperty Name="experience" ColumnName="experience" />
+          <ScalarProperty Name="category" ColumnName="category" />
+          <ScalarProperty Name="company" ColumnName="company" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GraduateDetails">
+      <EntityTypeMapping TypeName="changesModel.GraduateDetail">
+        <MappingFragment StoreEntitySet="GraduateDetails">
+          <ScalarProperty Name="gradid" ColumnName="gradid" />
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="dateofbirth" ColumnName="dateofbirth" />
+          <ScalarProperty Name="schoolname" ColumnName="schoolname" />
+          <ScalarProperty Name="aggregate1" ColumnName="aggregate1" />
+          <ScalarProperty Name="intercollege" ColumnName="intercollege" />
+          <ScalarProperty Name="aggregate2" ColumnName="aggregate2" />
+          <ScalarProperty Name="graduatecollege" ColumnName="graduatecollege" />
+          <ScalarProperty Name="branch" ColumnName="branch" />
+          <ScalarProperty Name="aggregate3" ColumnName="aggregate3" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="mobilephone" ColumnName="mobilephone" />
+          <ScalarProperty Name="password1" ColumnName="password1" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tables">
+      <EntityTypeMapping TypeName="changesModel.Table">
+        <MappingFragment StoreEntitySet="Table">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="mobilephone" ColumnName="mobilephone" />
+          <ScalarProperty Name="password1" ColumnName="password1" />
+          <ScalarProperty Name="loginid" ColumnName="loginid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

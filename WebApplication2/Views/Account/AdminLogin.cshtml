@@ -1,0 +1,49 @@
+﻿@using WebApplication2.Models
+
+   
+
+<h2>@ViewBag.Title</h2>
+<div class="row">
+    <div class="col-md-8">
+
+        @using (Html.BeginForm("AdminLogin", "Account", FormMethod.Post))
+        {
+
+            <form>
+                <centre>
+                    <b>
+                        EMAIL ID:  <input type="text" placeholder="Enter email id" name="email" required>
+                    </b>
+                </centre><br />
+                <br /> <centre>
+                    <b>
+                        PASSWORD:  <input type="password" placeholder="Enter password" name="password1" required>
+                    </b>
+                </centre><br />
+
+
+              
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <br/><centre><button onclick="submit">Log in</button></centre>
+                    </div>
+                </div>
+                
+            </form>
+            @* Enable this once you have account confirmation enabled for password reset functionality
+                <p>
+                    @Html.ActionLink("Forgot your password?", "ForgotPassword")
+                </p>*@
+        }
+
+    </div>
+    <div class="col-md-4">
+        @*<section id="socialLoginForm">
+                @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
+            </section>*@
+    </div>
+</div>
+
+@*@section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }*@

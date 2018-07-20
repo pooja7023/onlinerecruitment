@@ -1,0 +1,25 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model WebApplication2.Models.Employee
+
+<body>
+    <h3>Details</h3>
+    <form>
+        <dl>
+            <dt>sno</dt>
+            <dd>@Model.sno</dd>
+            <dt>location</dt>
+            <dd>@Model.location</dd>
+            <dt>technology</dt>
+            <dd>@Model.technology</dd>
+            <dt>experience</dt>
+            <dd>@Model.experience</dd>
+            <dt>category</dt>
+            <dd>@Model.category</dd>
+            <dt>company</dt>
+            <dd>@Model.company</dd>
+        </dl>
+       <button> @Html.ActionLink("Apply", "Login")</button>
+    </form>
+</body>

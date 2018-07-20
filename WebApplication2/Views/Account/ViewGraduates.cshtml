@@ -1,0 +1,45 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model WebApplication2.Models.GraduateDetail
+@using (Html.BeginForm("ViewGraduates", "Account"))
+{
+    
+    <body>
+        <h3>DETAILS</h3>
+        <br/><dl>
+    <dt>GraduateId</dt>
+    <dd>@Model.gradid</dd>
+    <dt>firstname</dt>
+    <dd>@Model.firstname</dd>
+    <dt>lastname</dt>
+    <dd>@Model.lastname</dd>
+    <dt>gender</dt>
+    <dd>@Model.gender</dd>
+    <dt>DateOfbirth</dt>
+    <dd>@Model.dateofbirth</dd>
+    <dt>schoolname</dt>
+    <dd>@Model.schoolname</dd>
+    <dt>SSC Aggregate </dt>
+    <dd>@Model.aggregate1</dd>
+    <dt>Inter College</dt>
+    <dd>@Model.intercollege</dd>
+    <dt>Intermediate Aggregate</dt>
+    <dd>@Model.aggregate2</dd>
+    <dt>Graduate College</dt>
+    <dd>@Model.graduatecollege</dd>
+    <dt>Branch</dt>
+    <dd>@Model.branch</dd>
+    <dt>Graduate Aggregate</dt>
+    <dd>@Model.aggregate3</dd>
+    <dt>Email</dt>
+    <dd>@Model.email</dd>
+</dl>
+        <button>
+            @Html.ActionLink("Edit", "EditGraduateProfile", "Account") </button>
+                <button>
+                    @Html.ActionLink("Back", "LoginSuccessfull", "Account") </button>
+                        <button>@Html.ActionLink("logout", "LogOut", "Account") </button>
+</body>
+
+}

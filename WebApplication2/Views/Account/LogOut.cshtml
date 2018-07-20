@@ -1,0 +1,23 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>LogOut</title>
+</head>
+<body>
+    @using (Html.BeginForm("Login", "Account", FormMethod.Post))
+    {
+        <div>
+
+            <h1>You have successfully logged out </h1>
+            <button onclick="submit"> click here to Login Again</button>
+        </div>
+    }
+</body>
+</html>

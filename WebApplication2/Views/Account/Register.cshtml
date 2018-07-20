@@ -1,0 +1,17 @@
+﻿
+@model WebApplication2.Models.GraduateDetail
+<body>
+    @using (Html.BeginForm("Register", "Account", FormMethod.Post))
+    {
+        <div>
+            <centre>
+
+                Email:<input type="text" placeholder="Enter Email" name="email"><br /><br />
+                Password:<input type="password" placeholder="Enter Password" name="password1"><br /><br />
+                @*Confirm_Password:<input type="password" placeholder="Re-Enter Password " name="Confirm_Password" ><br/><br/>*@
+                MobilePhone:<input type="text" placeholder="Enter mobile number" name="mobilephone"><br /><br />
+                <centre><button onclick="Submit"> submit </button></centre>
+            </centre>
+        </div>
+    }
+</body>

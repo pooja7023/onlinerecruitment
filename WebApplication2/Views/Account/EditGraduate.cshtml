@@ -1,0 +1,28 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model WebApplication2.Models.GraduateDetail
+@using (Html.BeginForm("EditGraduate", "Account", FormMethod.Post))
+{
+
+    <h3>Edit Details</h3><br /><br />
+        @*<h4>hi @Session["uname"]</h4><br /><br />*@
+        <div>
+            <div>
+                @Html.LabelFor(m => m.email)
+                @Html.EditorFor(m => m.email)
+            </div><br /><br />
+            <div>
+                @Html.LabelFor(m => m.mobilephone)
+                @Html.EditorFor(m => m.mobilephone)
+            </div><br /><br />
+            <div>
+                @Html.LabelFor(m => m.password1)
+                @Html.EditorFor(m => m.password1)
+            </div><br /><br />
+            <div>
+                <input type="submit" value="Update" />
+            </div>
+        </div>
+        <br/><button>@Html.ActionLink("logout", "LogOut", "Account")</button>
+}

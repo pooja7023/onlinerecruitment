@@ -1,0 +1,30 @@
+﻿
+@using WebApplication2.Models
+
+@*@model LoginViewModel
+    @{
+        ViewBag.Title = "welcomepage";
+    }*@
+@{
+    if (Session["uname"] != null)
+    {
+        if (Session["uname"].ToString() != string.Empty)
+        {
+            <h3>welcome @Session["uname"]</h3>
+            @*<h3>your GraduateId is :<b> @Session["uid"] </b></h3>*@
+
+
+            @*<td>@Model.loginid</td>*@
+
+
+            <button>@Html.ActionLink("profile", "ViewGraduates")</button>
+            <button>@Html.ActionLink("status", "GraduateStatus", "Account")</button>
+            <button>@Html.ActionLink("logout", "LogOut", "Account")</button>
+        }
+    }
+    else
+    {
+        <h1>You should have logged out</h1>
+        <button>@Html.ActionLink("Login Again", "Login") </button>
+    }
+}

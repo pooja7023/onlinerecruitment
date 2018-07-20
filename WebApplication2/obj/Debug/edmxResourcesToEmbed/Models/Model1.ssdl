@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="changesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AdminTable">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="email" Type="nvarchar(max)" />
+    <Property Name="mobilephone" Type="nvarchar" MaxLength="50" />
+    <Property Name="password1" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Employees">
+    <Key>
+      <PropertyRef Name="sno" />
+    </Key>
+    <Property Name="sno" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="location" Type="varchar(max)" />
+    <Property Name="technology" Type="varchar(max)" />
+    <Property Name="experience" Type="int" />
+    <Property Name="category" Type="varchar(max)" />
+    <Property Name="company" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="GraduateDetails">
+    <Key>
+      <PropertyRef Name="gradid" />
+    </Key>
+    <Property Name="gradid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="firstname" Type="varchar(max)" />
+    <Property Name="lastname" Type="varchar(max)" />
+    <Property Name="gender" Type="varchar(max)" />
+    <Property Name="dateofbirth" Type="date" />
+    <Property Name="schoolname" Type="varchar(max)" />
+    <Property Name="aggregate1" Type="int" />
+    <Property Name="intercollege" Type="varchar(max)" />
+    <Property Name="aggregate2" Type="int" />
+    <Property Name="graduatecollege" Type="varchar(max)" />
+    <Property Name="branch" Type="varchar(max)" />
+    <Property Name="aggregate3" Type="int" />
+    <Property Name="email" Type="nvarchar(max)" />
+    <Property Name="mobilephone" Type="varchar(max)" />
+    <Property Name="password1" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Table">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="email" Type="nvarchar(max)" />
+    <Property Name="mobilephone" Type="nvarchar" MaxLength="50" />
+    <Property Name="password1" Type="nvarchar" MaxLength="50" />
+    <Property Name="loginid" Type="int" />
+  </EntityType>
+  <EntityContainer Name="changesModelStoreContainer">
+    <EntitySet Name="AdminTable" EntityType="Self.AdminTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Employees" EntityType="Self.Employees" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GraduateDetails" EntityType="Self.GraduateDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Table" EntityType="Self.Table" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

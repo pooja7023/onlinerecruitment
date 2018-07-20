@@ -1,0 +1,55 @@
+﻿@using WebApplication2.Models
+@*@model LoginViewModel
+    @{
+        ViewBag.Title = "Log in";
+    }*@
+
+<h2>@ViewBag.Title</h2>
+<div class="row">
+    <div class="col-md-8">
+        @using (Html.BeginForm("Login", "Account", FormMethod.Post))
+        { 
+            <form>
+                <centre>
+                    <b>
+                        EMAIL ID:  <input type="text" placeholder="Enter email id" name="email" required>
+                    </b>
+                </centre><br />
+                <br /> <centre>
+                    <b>
+                        PASSWORD:  <input type="password" placeholder="Enter password" name="password1" required>
+                    </b>
+                </centre><br />
+
+
+                <br />
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <centre><button onclick="submit">Log in</button></centre>
+                    </div>
+                </div>
+                <br /><p>
+                    @Html.ActionLink("Register as a new user", "Register")
+                </p>
+                
+            </form>
+                            @* Enable this once you have account confirmation enabled for password reset functionality
+                                <p>
+                                    @Html.ActionLink("Forgot your password?", "ForgotPassword")
+                                </p>*@
+        }
+        <br /><p>
+            @Html.ActionLink("Login As a Admin", "AdminLogin","Account")
+        </p>
+
+    </div>
+    <div class="col-md-4">
+        @*<section id="socialLoginForm">
+                @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
+            </section>*@
+    </div>
+</div>
+
+@*@section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }*@

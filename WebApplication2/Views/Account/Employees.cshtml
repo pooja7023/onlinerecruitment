@@ -1,0 +1,36 @@
+﻿
+
+@model IEnumerable<WebApplication2.Models.Employee>
+@{
+
+}
+@using (Html.BeginForm("Employees", "Account", FormMethod.Post))
+{
+
+    <table border="1">
+        <tr>
+            <th>sno</th>
+            <th>location</th>
+            <th>technology</th>
+            <th>experience</th>
+            <th>category</th>
+            <th>company</th>
+            <th>More</th>
+            <th>Actions</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.sno</td>
+                <td>@item.location</td>
+                <td>@item.technology</td>
+                <td>@item.experience</td>
+                <td>@item.category</td>
+                <td>@item.company</td>
+
+                <td> @Html.ActionLink("view", "ViewEmployees", new { sno = item.sno })</td>
+                <td>@Html.ActionLink("Apply", "Login")</td>
+            </tr>
+        }
+    </table>
+}

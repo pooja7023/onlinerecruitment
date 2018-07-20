@@ -1,0 +1,54 @@
+﻿@using WebApplication2.Models
+@*@model LoginViewModel
+    @{
+        ViewBag.Title = "welcomepage";
+    }*@
+@{
+    using (Html.BeginForm("EditGraduate", "Account", FormMethod.Get))
+    {
+        if (Session["uname"] != null)
+        {
+            if (Session["uname"].ToString() != string.Empty)
+            {
+
+            <h3>welcome @Session["uname"]</h3>
+
+            <table border="1">
+                <tr>
+
+                   
+                    <th>email</th>
+                    <th>mobilephone</th>
+                    <th>password1</th>
+                    <th>More</th>
+                    <th>Actions</th>
+                  
+                </tr>
+                @foreach (var item in Model)
+                {
+                    <tr>
+
+                       
+                        <td><input type="radio" name="email" value="@item.email">@item.email</td>
+                        <td>@item.mobilephone</td>
+                        <td>@item.password1</td>
+                        <td><button onclick="onsubmit">Edit</button></td>
+                        @*<td>@Html.ActionLink("Edit", "EditGraduate", "Account")</td>*@
+                        <td>@Html.ActionLink("Delete", "DeleteGraduate", new { gradid = item.gradid })</td>
+
+                    </tr>
+                }
+            </table>
+            <br/><button>@Html.ActionLink("logout", "LogOut", "Account")</button>
+
+            }
+        }
+        else
+        {
+        <h1>You should have logged out</h1>
+        <button>@Html.ActionLink("Login Again", "Login") </button>
+            }
+        }
+    }
+
+

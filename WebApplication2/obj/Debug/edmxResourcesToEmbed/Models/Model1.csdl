@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="changesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="AdminTable">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="mobilephone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="password1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="sno" />
+    </Key>
+    <Property Name="sno" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="location" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="technology" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="experience" Type="Int32" />
+    <Property Name="category" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="company" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="GraduateDetail">
+    <Key>
+      <PropertyRef Name="gradid" />
+    </Key>
+    <Property Name="gradid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="firstname" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="lastname" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="gender" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="dateofbirth" Type="DateTime" Precision="0" />
+    <Property Name="schoolname" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="aggregate1" Type="Int32" />
+    <Property Name="intercollege" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="aggregate2" Type="Int32" />
+    <Property Name="graduatecollege" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="branch" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="aggregate3" Type="Int32" />
+    <Property Name="email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="mobilephone" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="password1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Table">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="mobilephone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="password1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="loginid" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="changesEntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AdminTables" EntityType="Self.AdminTable" />
+    <EntitySet Name="Employees" EntityType="Self.Employee" />
+    <EntitySet Name="GraduateDetails" EntityType="Self.GraduateDetail" />
+    <EntitySet Name="Tables" EntityType="Self.Table" />
+  </EntityContainer>
+</Schema>

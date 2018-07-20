@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="changesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AdminTable">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="email" Type="nvarchar(max)" />
+          <Property Name="mobilephone" Type="nvarchar" MaxLength="50" />
+          <Property Name="password1" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Employees">
+          <Key>
+            <PropertyRef Name="sno" />
+          </Key>
+          <Property Name="sno" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="location" Type="varchar(max)" />
+          <Property Name="technology" Type="varchar(max)" />
+          <Property Name="experience" Type="int" />
+          <Property Name="category" Type="varchar(max)" />
+          <Property Name="company" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="GraduateDetails">
+          <Key>
+            <PropertyRef Name="gradid" />
+          </Key>
+          <Property Name="gradid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="firstname" Type="varchar(max)" />
+          <Property Name="lastname" Type="varchar(max)" />
+          <Property Name="gender" Type="varchar(max)" />
+          <Property Name="dateofbirth" Type="date" />
+          <Property Name="schoolname" Type="varchar(max)" />
+          <Property Name="aggregate1" Type="int" />
+          <Property Name="intercollege" Type="varchar(max)" />
+          <Property Name="aggregate2" Type="int" />
+          <Property Name="graduatecollege" Type="varchar(max)" />
+          <Property Name="branch" Type="varchar(max)" />
+          <Property Name="aggregate3" Type="int" />
+          <Property Name="email" Type="nvarchar(max)" />
+          <Property Name="mobilephone" Type="varchar(max)" />
+          <Property Name="password1" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="Table">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="email" Type="nvarchar(max)" />
+          <Property Name="mobilephone" Type="nvarchar" MaxLength="50" />
+          <Property Name="password1" Type="nvarchar" MaxLength="50" />
+          <Property Name="loginid" Type="int" />
+        </EntityType>
+        <EntityContainer Name="changesModelStoreContainer">
+          <EntitySet Name="AdminTable" EntityType="Self.AdminTable" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Employees" EntityType="Self.Employees" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GraduateDetails" EntityType="Self.GraduateDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Table" EntityType="Self.Table" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="changesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="AdminTable">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="mobilephone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="password1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="sno" />
+          </Key>
+          <Property Name="sno" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="location" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="technology" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="experience" Type="Int32" />
+          <Property Name="category" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="company" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="GraduateDetail">
+          <Key>
+            <PropertyRef Name="gradid" />
+          </Key>
+          <Property Name="gradid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="firstname" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="lastname" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="gender" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="dateofbirth" Type="DateTime" Precision="0" />
+          <Property Name="schoolname" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="aggregate1" Type="Int32" />
+          <Property Name="intercollege" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="aggregate2" Type="Int32" />
+          <Property Name="graduatecollege" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="branch" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="aggregate3" Type="Int32" />
+          <Property Name="email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="mobilephone" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="password1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Table">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="mobilephone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="password1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="loginid" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="changesEntities2" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="AdminTables" EntityType="Self.AdminTable" />
+          <EntitySet Name="Employees" EntityType="Self.Employee" />
+          <EntitySet Name="GraduateDetails" EntityType="Self.GraduateDetail" />
+          <EntitySet Name="Tables" EntityType="Self.Table" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="changesModelStoreContainer" CdmEntityContainer="changesEntities2">
+          <EntitySetMapping Name="AdminTables">
+            <EntityTypeMapping TypeName="changesModel.AdminTable">
+              <MappingFragment StoreEntitySet="AdminTable">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="mobilephone" ColumnName="mobilephone" />
+                <ScalarProperty Name="password1" ColumnName="password1" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Employees">
+            <EntityTypeMapping TypeName="changesModel.Employee">
+              <MappingFragment StoreEntitySet="Employees">
+                <ScalarProperty Name="sno" ColumnName="sno" />
+                <ScalarProperty Name="location" ColumnName="location" />
+                <ScalarProperty Name="technology" ColumnName="technology" />
+                <ScalarProperty Name="experience" ColumnName="experience" />
+                <ScalarProperty Name="category" ColumnName="category" />
+                <ScalarProperty Name="company" ColumnName="company" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GraduateDetails">
+            <EntityTypeMapping TypeName="changesModel.GraduateDetail">
+              <MappingFragment StoreEntitySet="GraduateDetails">
+                <ScalarProperty Name="gradid" ColumnName="gradid" />
+                <ScalarProperty Name="firstname" ColumnName="firstname" />
+                <ScalarProperty Name="lastname" ColumnName="lastname" />
+                <ScalarProperty Name="gender" ColumnName="gender" />
+                <ScalarProperty Name="dateofbirth" ColumnName="dateofbirth" />
+                <ScalarProperty Name="schoolname" ColumnName="schoolname" />
+                <ScalarProperty Name="aggregate1" ColumnName="aggregate1" />
+                <ScalarProperty Name="intercollege" ColumnName="intercollege" />
+                <ScalarProperty Name="aggregate2" ColumnName="aggregate2" />
+                <ScalarProperty Name="graduatecollege" ColumnName="graduatecollege" />
+                <ScalarProperty Name="branch" ColumnName="branch" />
+                <ScalarProperty Name="aggregate3" ColumnName="aggregate3" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="mobilephone" ColumnName="mobilephone" />
+                <ScalarProperty Name="password1" ColumnName="password1" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tables">
+            <EntityTypeMapping TypeName="changesModel.Table">
+              <MappingFragment StoreEntitySet="Table">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="mobilephone" ColumnName="mobilephone" />
+                <ScalarProperty Name="password1" ColumnName="password1" />
+                <ScalarProperty Name="loginid" ColumnName="loginid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

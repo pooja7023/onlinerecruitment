@@ -1,0 +1,67 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model WebApplication2.Models.GraduateDetail
+
+@using (Html.BeginForm("EditGraduateProfile", "Account", FormMethod.Post))
+{
+
+    <b><centre>Edit Details</centre></b><br /><br />
+        <div>
+
+            <br /><div>
+                @Html.LabelFor(m => m.firstname)
+                @Html.EditorFor(m => m.firstname)
+            </div>
+            <br /><div>
+                @Html.LabelFor(m => m.lastname)
+                @Html.EditorFor(m => m.lastname)
+            </div>
+            <br /><div>
+                @Html.LabelFor(m => m.gender)
+                @Html.EditorFor(m => m.gender)
+            </div>
+            <br /><div>
+                @Html.LabelFor(m => m.dateofbirth)
+                @Html.EditorFor(m => m.dateofbirth)
+            </div>
+            <br /><div>
+                @Html.LabelFor(m => m.schoolname)
+                @Html.EditorFor(m => m.schoolname)
+            </div>
+            <br /><div>
+                @Html.LabelFor(m => m.aggregate1)
+                @Html.EditorFor(m => m.aggregate1)
+            </div>
+            <br /><div>
+                @Html.LabelFor(m => m.intercollege)
+                @Html.EditorFor(m => m.intercollege)
+            </div>
+            <br /><div>
+                @Html.LabelFor(m => m.aggregate2)
+                @Html.EditorFor(m => m.aggregate2)
+            </div>
+            <br /><div>
+                @Html.LabelFor(m => m.graduatecollege)
+                @Html.EditorFor(m => m.graduatecollege)
+            </div>
+            <br /><div>
+                @Html.LabelFor(m => m.branch)
+                @Html.EditorFor(m => m.branch)
+            </div>
+            <br /><div>
+                @Html.LabelFor(m => m.aggregate3)
+                @Html.EditorFor(m => m.aggregate3)
+            </div>
+            @*<br /><div>
+                    @Html.LabelFor(m => m.email)
+                    @Html.EditorFor(m => m.email)
+                </div>
+                <br/><div>*@<div>
+                <input type="submit" value="Update" />
+            </div>
+        </div>
+        <br/><button>@Html.ActionLink("logout", "LogOut", "Account")</button>
+}
+
+

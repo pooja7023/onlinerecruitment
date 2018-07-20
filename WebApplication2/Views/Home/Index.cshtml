@@ -1,0 +1,85 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@using (Html.BeginForm("Index", "Account", FormMethod.Post))
+{
+
+    <button><p>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</p></button>
+    <button><p>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</p></button>
+    <br/><br/>
+<div class="jumbotron">
+        <h1>ONLINE RECRUITMENT SYSTEM</h1>
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <fieldset>
+                <legend>Find Jobs by Category</legend>
+                @Html.ActionLink("Computer Science", "Employees", "Account")<br />
+                @Html.ActionLink("Information Technology", "Employees", "Account")<br />
+                @Html.ActionLink("Electronics", "Employees", "Account")<br />
+                @Html.ActionLink("Electrical", "Employees", "Account")<br />
+                @Html.ActionLink("Aeronautical", "Employees", "Account")<br />
+                @Html.ActionLink("Mechanical", "Employees", "Account")<br />
+                @Html.ActionLink("Civil", "Employees", "Account")<br />
+            </fieldset>
+        </div>
+
+        <div class="col-md-4">
+            <fieldset>
+                <legend>Search Jobs</legend>
+                <div class="row">
+                    <div class="col-lg-1">
+                        <h5><b>Location</b></h5>
+                        <select title="Location">
+                            <option value="Search">search</option>
+                            <option value="Hyderabad">@Html.ActionLink("Hyderabad", "SearchEmployees")</option>
+                            <option value="Banglore">@Html.ActionLink("Bangalore", "SearchEmployees")</option>
+                            <option value="Chennai">@Html.ActionLink("Chennai", "SearchEmployees")</option>
+                            <option value="Pune">@Html.ActionLink("Pune", "SearchEmployees")</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-offset-7">
+                        <h5><b>Technology</b></h5>
+                        <select title="Technology">
+                            <option value="Search">Search</option>
+                            <option value="Bigdata">@Html.ActionLink("Bigdata", "SearchEmployees")</option>
+                            <option value="Hadoop">@Html.ActionLink("Hadoop", "SearchEmployees")</option>
+                            <option value="Python">@Html.ActionLink("Python", "SearchEmployees")</option>
+                            <option value="ASP.Net">@Html.ActionLink("ASP.Net", "SearchEmployees")</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-0">
+                    <h5><b>Experience</b></h5>
+                    <select title="Experience">
+                        <option value="Search">search</option>
+                        <option value="0">@Html.ActionLink("0", "SearchEmployees")</option>
+                        <option value="1">@Html.ActionLink("1", "SearchEmployees")</option>
+                        <option value="2">@Html.ActionLink("2", "SearchEmployees")</option>
+                        <option value="3">@Html.ActionLink("3", "SearchEmployees")</option>
+                        <option value="3">@Html.ActionLink("4", "SearchEmployees")</option>
+                        <option value="3">@Html.ActionLink("5", "SearchEmployees")</option>
+                    </select>
+                </div>
+                <div class="col-lg-offset-4">
+                    <button>@Html.ActionLink("Find", "SearchEmployees", "Account")</button>
+                </div>
+            </fieldset>
+        </div>
+        <div class="col-md-4">
+            <fieldset>
+                <legend>Top Companies</legend>
+                @Html.ActionLink("NASA", "Employees", "Account")<br />
+                @Html.ActionLink("Google", "Employees", "Account")<br />
+                @Html.ActionLink("Wipro", "Employees", "Account")<br />
+                @Html.ActionLink("TechMahindra", "Employees", "Account")<br />
+                @Html.ActionLink("Tcs", "Employees", "Account")<br />
+                @Html.ActionLink("Infosys", "Employees", "Account")<br />
+                @Html.ActionLink("Microsoft", "Employees", "Account")<br />
+            </fieldset>
+        </div>
+
+    </div>
+}
